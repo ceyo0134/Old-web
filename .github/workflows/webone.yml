@@ -1,6 +1,8 @@
 name: webone
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'   # safety net: zincir koparsa yeniden baslat
 concurrency:
   group: webone
   cancel-in-progress: false
