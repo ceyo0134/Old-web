@@ -28,11 +28,9 @@ jobs:
           curl -fsSL https://github.com/ekzhang/bore/releases/download/v0.6.0/bore-v0.6.0-x86_64-unknown-linux-musl.tar.gz | tar xz
           sudo install -m 755 bore /usr/local/bin/bore
 
-      - name: Start WebOne (password protected)
-        env:
-          PROXY_PASS: ${{ secrets.PROXY_PASS }}
+      - name: Start WebOne (public login user:oldweb)
         run: |
-          nohup webone 8080 -a "old:${PROXY_PASS}" --log webone.log > webone.out 2>&1 &
+          nohup webone 8080 -a "user:oldweb" --log webone.log > webone.out 2>&1 &
           sleep 8
           curl -s -o /dev/null -w "local status page: %{http_code}\n" http://127.0.0.1:8080/ || true
           tail -n 20 webone.out || true
