@@ -3,22 +3,19 @@
 Windows XP / Internet Explorer gibi eski tarayıcılardan modern (HTTPS) sitelere girmek için
 **ücretsiz ve herkese açık** WebOne proxy sunucusu. GitHub Actions üzerinde çalışır, bore tüneli ile dışarı açılır.
 
-## Proxy bilgileri (herkes kullanabilir)
+## Proxy bilgileri (herkes kullanabilir, şifre yok)
 
 | | |
 |---|---|
 | Adres | `bore.pub` |
 | Port | `40080` |
-| Kullanıcı adı | `user` |
-| Şifre | `oldweb` |
 
 Port değişirse güncel adres `status/address.txt` dosyasındadır.
 
 ## Kurulum (Windows XP + Internet Explorer)
 1. **Araçlar → İnternet Seçenekleri → Bağlantılar → LAN Ayarları**
 2. "Proxy sunucusu kullan" kutusunu işaretle, Adres: `bore.pub`, Bağlantı noktası: `40080`, Tamam.
-3. Bir siteye girince kullanıcı adı ve şifre sorar: `user` / `oldweb`
-4. Siteyi aç, HTTPS siteler de açılır.
+3. Bitti, şifre sorulmaz. Siteyi aç, HTTPS siteler de açılır.
 
 ## Modern tarayıcı indir: Supermium
 Supermium, Windows XP (SP3), 2003, Vista, 7, 8.x ve üstünde çalışan güncel Chromium tabanlı tarayıcıdır.
